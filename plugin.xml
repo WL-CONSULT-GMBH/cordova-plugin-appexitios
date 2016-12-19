@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="wlconsult-cordova-appExit" version="0.0.1">
+    <name>iOSAppExit</name>
+    <description>Add the ability to programmatically close the app on iOS</description>
+    <license>Apache 2.0</license>
+    <keywords>iOS,exit,cordova,phonegap,terminate,test</keywords>
+    <js-module src="www/appExitiOS.js" name="AppExitIOS">
+        <clobbers target="navigator.app" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AppExitIOS">
+                <param name="ios-package" value="AppExitIOS"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/AppExitIOS.h" />
+        <source-file src="src/ios/AppExitIOS.m" />
+    </platform>
+</plugin>
