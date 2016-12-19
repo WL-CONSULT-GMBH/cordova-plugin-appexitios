@@ -4,7 +4,7 @@ This is a plugin for cordova, wich adds the ability to programmatically close th
 
 ##Code Example
 
-navigator.app.exit();
+navigator.app.exitApp();
 
 ## Caution
 
